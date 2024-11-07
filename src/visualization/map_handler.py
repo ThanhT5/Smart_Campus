@@ -201,3 +201,20 @@ class MapHandler:
             map_pos[0] / self.map_width,  # Normalize x coordinate
             map_pos[1] / self.window_height  # Normalize y coordinate
         )
+
+    def draw_path(self, path: list, color: tuple = (255, 0, 0), width: int = 4):
+        """Draw the selected path with thicker lines"""
+        if not path:
+            return
+            
+        for i in range(len(path['nodes']) - 1):
+            start_id = path['nodes'][i]
+            end_id = path['nodes'][i + 1]
+            
+            start_loc = self.graph_manager.campus_data.locations[start_id]
+            end_loc = self.graph_manager.campus_data.locations[end_id]
+            
+            start_pos = self._transform_coordinates(start_loc.x, start_loc.y)
+            end_pos = self._transform_coordinates(end_loc.x, end_loc.y)
+            
+            pygame.draw.line(self.screen, color, start_pos, end_pos, width)

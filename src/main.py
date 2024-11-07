@@ -19,7 +19,7 @@ class CSUFNavigator:
         )
         self.text_input = TextInput(self.map_handler.screen, pygame.font.Font(None, 32))  # Create a text input field
         self.graph_manager = GraphManager(self.map_editor.campus_data)  # Create a graph manager with campus data
-        self.nav_handler = NavigationHandler(self.graph_manager)  # Create a navigation handler with the graph manager
+        self.nav_handler = NavigationHandler(self.graph_manager, self.console_panel)  # Create a navigation handler with the graph manager and console panel
         self.edit_mode = True  # Set the initial mode to edit mode
         self.running = True  # Set the running state to true
 
