@@ -1,0 +1,1371 @@
+{
+    "locations": [
+        {
+            "id": "node_23",
+            "name": "DSS & WoMen's Center",
+            "x": 0.65875,
+            "y": 0.6716666666666666,
+            "type": "student_services",
+            "full_name": "Disability Support Services & WoMen's Center",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_34"
+            ]
+        },
+        {
+            "id": "node_1",
+            "name": "SRC",
+            "x": 0.2175,
+            "y": 0.08166666666666667,
+            "type": "recreation",
+            "full_name": "Student Recreation Center",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_23"
+            ]
+        },
+        {
+            "id": "node_2",
+            "name": "TG",
+            "x": 0.42625,
+            "y": 0.08666666666666667,
+            "type": "athletics",
+            "full_name": "Titan Gymnasium",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_24",
+                "waypoint_29"
+            ]
+        },
+        {
+            "id": "node_3",
+            "name": "B",
+            "x": 0.31625,
+            "y": 0.31,
+            "type": "retail",
+            "full_name": "Bookstore/Titan Shop",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_45"
+            ]
+        },
+        {
+            "id": "node_4",
+            "name": "CPAC",
+            "x": 0.325,
+            "y": 0.5816666666666667,
+            "type": "academic",
+            "full_name": "Clayes Performing Arts Center",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_39",
+                "waypoint_40",
+                "waypoint_51"
+            ]
+        },
+        {
+            "id": "node_5",
+            "name": "PL",
+            "x": 0.5,
+            "y": 0.39166666666666666,
+            "type": "academic",
+            "full_name": "Pollak Library",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_48",
+                "waypoint_59"
+            ]
+        },
+        {
+            "id": "node_6",
+            "name": "EC",
+            "x": 0.605,
+            "y": 0.425,
+            "type": "academic",
+            "full_name": "Education-Classroom",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_31",
+                "waypoint_33"
+            ]
+        },
+        {
+            "id": "node_7",
+            "name": "E",
+            "x": 0.74875,
+            "y": 0.24333333333333335,
+            "type": "academic",
+            "full_name": "Engineering",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "node_8",
+                "node_9",
+                "waypoint_31"
+            ]
+        },
+        {
+            "id": "node_8",
+            "name": "CS",
+            "x": 0.81,
+            "y": 0.24,
+            "type": "academic",
+            "full_name": "Computer Science",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "node_7"
+            ]
+        },
+        {
+            "id": "node_9",
+            "name": "SHCC",
+            "x": 0.63,
+            "y": 0.10666666666666667,
+            "type": "health_services",
+            "full_name": "Student Health & Counseling Center",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_30",
+                "node_7"
+            ]
+        },
+        {
+            "id": "node_10",
+            "name": "H",
+            "x": 0.635,
+            "y": 0.5866666666666667,
+            "type": "academic",
+            "full_name": "Humanities/Social Sciences",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_32"
+            ]
+        },
+        {
+            "id": "node_11",
+            "name": "MH",
+            "x": 0.46125,
+            "y": 0.735,
+            "type": "academic",
+            "full_name": "McCarthy Hall",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_35",
+                "waypoint_44"
+            ]
+        },
+        {
+            "id": "node_12",
+            "name": "DBH",
+            "x": 0.4275,
+            "y": 0.8366666666666667,
+            "type": "academic",
+            "full_name": "Dan Black Hall",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_43",
+                "waypoint_52"
+            ]
+        },
+        {
+            "id": "node_13",
+            "name": "GC",
+            "x": 0.29125,
+            "y": 0.75,
+            "type": "academic",
+            "full_name": "Greenhouse Complex",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_41"
+            ]
+        },
+        {
+            "id": "node_14",
+            "name": "VA",
+            "x": 0.11125,
+            "y": 0.54,
+            "type": "academic",
+            "full_name": "Visual Arts Center",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_38"
+            ]
+        },
+        {
+            "id": "node_15",
+            "name": "TSU",
+            "x": 0.165,
+            "y": 0.335,
+            "type": "student_services",
+            "full_name": "Titan Student Union",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_37"
+            ]
+        },
+        {
+            "id": "node_17",
+            "name": "GH",
+            "x": 0.63125,
+            "y": 0.7366666666666667,
+            "type": "academic",
+            "full_name": "Gordon Hall",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_34",
+                "node_18"
+            ]
+        },
+        {
+            "id": "node_18",
+            "name": "CJ",
+            "x": 0.67375,
+            "y": 0.8,
+            "type": "dining",
+            "full_name": "Carl's Jr.",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_57",
+                "waypoint_58",
+                "node_17"
+            ]
+        },
+        {
+            "id": "node_19",
+            "name": "SGMH",
+            "x": 0.715,
+            "y": 0.905,
+            "type": "academic",
+            "full_name": "Steven G. Mihaylo Hall",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_56",
+                "waypoint_58"
+            ]
+        },
+        {
+            "id": "node_20",
+            "name": "LH",
+            "x": 0.57,
+            "y": 0.8566666666666667,
+            "type": "academic",
+            "full_name": "Langsdorf Hall",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_54",
+                "waypoint_55"
+            ]
+        },
+        {
+            "id": "node_21",
+            "name": "AD",
+            "x": 0.60875,
+            "y": 0.8833333333333333,
+            "type": "administrative",
+            "full_name": "Administration",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_55",
+                "waypoint_56"
+            ]
+        },
+        {
+            "id": "node_22",
+            "name": "MC",
+            "x": 0.42875,
+            "y": 0.925,
+            "type": "academic",
+            "full_name": "Modular Complex",
+            "is_accessible": true,
+            "is_waypoint": false,
+            "connections": [
+                "waypoint_53"
+            ]
+        },
+        {
+            "id": "waypoint_23",
+            "name": "",
+            "x": 0.24625,
+            "y": 0.12333333333333334,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_1",
+                "waypoint_28"
+            ]
+        },
+        {
+            "id": "waypoint_24",
+            "name": "",
+            "x": 0.34375,
+            "y": 0.09166666666666666,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_2",
+                "waypoint_25",
+                "waypoint_26"
+            ]
+        },
+        {
+            "id": "waypoint_25",
+            "name": "",
+            "x": 0.3225,
+            "y": 0.255,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_26",
+                "waypoint_24"
+            ]
+        },
+        {
+            "id": "waypoint_26",
+            "name": "",
+            "x": 0.3175,
+            "y": 0.028333333333333332,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_27",
+                "waypoint_25",
+                "waypoint_24"
+            ]
+        },
+        {
+            "id": "waypoint_27",
+            "name": "",
+            "x": 0.26375,
+            "y": 0.01,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_28",
+                "waypoint_26"
+            ]
+        },
+        {
+            "id": "waypoint_28",
+            "name": "",
+            "x": 0.265,
+            "y": 0.12166666666666667,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_23",
+                "waypoint_27",
+                "waypoint_37"
+            ]
+        },
+        {
+            "id": "waypoint_29",
+            "name": "",
+            "x": 0.455,
+            "y": 0.18333333333333332,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_2",
+                "waypoint_30",
+                "waypoint_49"
+            ]
+        },
+        {
+            "id": "waypoint_30",
+            "name": "",
+            "x": 0.60875,
+            "y": 0.17333333333333334,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_29",
+                "node_9",
+                "waypoint_60"
+            ]
+        },
+        {
+            "id": "waypoint_31",
+            "name": "",
+            "x": 0.61625,
+            "y": 0.3433333333333333,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_6",
+                "node_7"
+            ]
+        },
+        {
+            "id": "waypoint_32",
+            "name": "",
+            "x": 0.59125,
+            "y": 0.575,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_33",
+                "node_10",
+                "waypoint_34",
+                "waypoint_61"
+            ]
+        },
+        {
+            "id": "waypoint_33",
+            "name": "",
+            "x": 0.6,
+            "y": 0.4583333333333333,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_6",
+                "waypoint_32"
+            ]
+        },
+        {
+            "id": "waypoint_34",
+            "name": "",
+            "x": 0.5925,
+            "y": 0.635,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_23",
+                "waypoint_32",
+                "node_17",
+                "waypoint_36"
+            ]
+        },
+        {
+            "id": "waypoint_35",
+            "name": "",
+            "x": 0.465,
+            "y": 0.675,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_42",
+                "node_11",
+                "waypoint_50",
+                "waypoint_62"
+            ]
+        },
+        {
+            "id": "waypoint_36",
+            "name": "",
+            "x": 0.56875,
+            "y": 0.665,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_34",
+                "waypoint_62"
+            ]
+        },
+        {
+            "id": "waypoint_37",
+            "name": "",
+            "x": 0.23125,
+            "y": 0.26166666666666666,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_15",
+                "waypoint_28"
+            ]
+        },
+        {
+            "id": "waypoint_38",
+            "name": "",
+            "x": 0.1875,
+            "y": 0.5833333333333334,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_14",
+                "waypoint_39"
+            ]
+        },
+        {
+            "id": "waypoint_39",
+            "name": "",
+            "x": 0.225,
+            "y": 0.5866666666666667,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_38",
+                "node_4"
+            ]
+        },
+        {
+            "id": "waypoint_40",
+            "name": "",
+            "x": 0.32,
+            "y": 0.6433333333333333,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_4",
+                "waypoint_41",
+                "waypoint_42"
+            ]
+        },
+        {
+            "id": "waypoint_41",
+            "name": "",
+            "x": 0.3275,
+            "y": 0.7283333333333334,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_13",
+                "waypoint_40"
+            ]
+        },
+        {
+            "id": "waypoint_42",
+            "name": "",
+            "x": 0.3375,
+            "y": 0.6633333333333333,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_40",
+                "waypoint_35"
+            ]
+        },
+        {
+            "id": "waypoint_43",
+            "name": "",
+            "x": 0.46375,
+            "y": 0.7966666666666666,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_12",
+                "waypoint_44"
+            ]
+        },
+        {
+            "id": "waypoint_44",
+            "name": "",
+            "x": 0.46375,
+            "y": 0.77,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_11",
+                "waypoint_43"
+            ]
+        },
+        {
+            "id": "waypoint_45",
+            "name": "",
+            "x": 0.32375,
+            "y": 0.37,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_3",
+                "waypoint_46"
+            ]
+        },
+        {
+            "id": "waypoint_46",
+            "name": "",
+            "x": 0.32875,
+            "y": 0.4,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_45",
+                "waypoint_47"
+            ]
+        },
+        {
+            "id": "waypoint_47",
+            "name": "",
+            "x": 0.445,
+            "y": 0.4816666666666667,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_46",
+                "waypoint_48",
+                "waypoint_50",
+                "waypoint_51"
+            ]
+        },
+        {
+            "id": "waypoint_48",
+            "name": "",
+            "x": 0.44875,
+            "y": 0.38,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_5",
+                "waypoint_49",
+                "waypoint_47"
+            ]
+        },
+        {
+            "id": "waypoint_49",
+            "name": "",
+            "x": 0.4475,
+            "y": 0.22166666666666668,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_29",
+                "waypoint_48"
+            ]
+        },
+        {
+            "id": "waypoint_50",
+            "name": "",
+            "x": 0.44625,
+            "y": 0.6266666666666667,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_47",
+                "waypoint_35"
+            ]
+        },
+        {
+            "id": "waypoint_51",
+            "name": "",
+            "x": 0.33,
+            "y": 0.4683333333333333,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_4",
+                "waypoint_47"
+            ]
+        },
+        {
+            "id": "waypoint_52",
+            "name": "",
+            "x": 0.4625,
+            "y": 0.86,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_53",
+                "node_12"
+            ]
+        },
+        {
+            "id": "waypoint_53",
+            "name": "",
+            "x": 0.4625,
+            "y": 0.8933333333333333,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_22",
+                "waypoint_52",
+                "waypoint_54"
+            ]
+        },
+        {
+            "id": "waypoint_54",
+            "name": "",
+            "x": 0.54125,
+            "y": 0.8716666666666667,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_53",
+                "node_20"
+            ]
+        },
+        {
+            "id": "waypoint_55",
+            "name": "",
+            "x": 0.5825,
+            "y": 0.8816666666666667,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_21",
+                "node_20"
+            ]
+        },
+        {
+            "id": "waypoint_56",
+            "name": "",
+            "x": 0.645,
+            "y": 0.8916666666666667,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_21",
+                "node_19",
+                "waypoint_57"
+            ]
+        },
+        {
+            "id": "waypoint_57",
+            "name": "",
+            "x": 0.64625,
+            "y": 0.82,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_56",
+                "node_18"
+            ]
+        },
+        {
+            "id": "waypoint_58",
+            "name": "",
+            "x": 0.67125,
+            "y": 0.8283333333333334,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_18",
+                "node_19"
+            ]
+        },
+        {
+            "id": "waypoint_59",
+            "name": "",
+            "x": 0.52125,
+            "y": 0.37833333333333335,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "node_5",
+                "waypoint_60"
+            ]
+        },
+        {
+            "id": "waypoint_60",
+            "name": "",
+            "x": 0.5425,
+            "y": 0.37833333333333335,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_59",
+                "waypoint_30",
+                "waypoint_61"
+            ]
+        },
+        {
+            "id": "waypoint_61",
+            "name": "",
+            "x": 0.535,
+            "y": 0.58,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_32",
+                "waypoint_60",
+                "waypoint_62"
+            ]
+        },
+        {
+            "id": "waypoint_62",
+            "name": "",
+            "x": 0.53,
+            "y": 0.665,
+            "type": "waypoint",
+            "full_name": "",
+            "is_accessible": true,
+            "is_waypoint": true,
+            "connections": [
+                "waypoint_35",
+                "waypoint_36",
+                "waypoint_61"
+            ]
+        }
+    ],
+    "paths": [
+        {
+            "start_id": "node_1",
+            "end_id": "waypoint_23",
+            "distance": 38.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_24",
+            "end_id": "node_2",
+            "distance": 62.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_23",
+            "end_id": "waypoint_28",
+            "distance": 14.1,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_28",
+            "end_id": "waypoint_27",
+            "distance": 83.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_27",
+            "end_id": "waypoint_26",
+            "distance": 42.6,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_26",
+            "end_id": "waypoint_25",
+            "distance": 170.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_25",
+            "end_id": "waypoint_24",
+            "distance": 123.5,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_26",
+            "end_id": "waypoint_24",
+            "distance": 51.4,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_2",
+            "end_id": "waypoint_29",
+            "distance": 75.6,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_29",
+            "end_id": "waypoint_30",
+            "distance": 115.6,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_30",
+            "end_id": "node_9",
+            "distance": 52.5,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_7",
+            "end_id": "node_8",
+            "distance": 46.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_9",
+            "end_id": "node_7",
+            "distance": 135.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_6",
+            "end_id": "waypoint_31",
+            "distance": 61.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_31",
+            "end_id": "node_7",
+            "distance": 124.5,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_6",
+            "end_id": "waypoint_33",
+            "distance": 25.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_33",
+            "end_id": "waypoint_32",
+            "distance": 87.7,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_32",
+            "end_id": "node_10",
+            "distance": 34.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_23",
+            "end_id": "waypoint_34",
+            "distance": 56.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_34",
+            "end_id": "waypoint_32",
+            "distance": 45.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_34",
+            "end_id": "node_17",
+            "distance": 81.6,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_36",
+            "end_id": "waypoint_34",
+            "distance": 28.7,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_37",
+            "end_id": "node_15",
+            "distance": 74.1,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_37",
+            "end_id": "waypoint_28",
+            "distance": 108.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_14",
+            "end_id": "waypoint_38",
+            "distance": 65.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_38",
+            "end_id": "waypoint_39",
+            "distance": 28.2,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_39",
+            "end_id": "node_4",
+            "distance": 75.1,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_4",
+            "end_id": "waypoint_40",
+            "distance": 46.4,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_13",
+            "end_id": "waypoint_41",
+            "distance": 31.7,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_41",
+            "end_id": "waypoint_40",
+            "distance": 64.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_40",
+            "end_id": "waypoint_42",
+            "distance": 19.9,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_42",
+            "end_id": "waypoint_35",
+            "distance": 96.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_11",
+            "end_id": "waypoint_35",
+            "distance": 45.1,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_12",
+            "end_id": "waypoint_43",
+            "distance": 40.5,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_44",
+            "end_id": "node_11",
+            "distance": 26.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_44",
+            "end_id": "waypoint_43",
+            "distance": 20.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_3",
+            "end_id": "waypoint_45",
+            "distance": 45.4,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_45",
+            "end_id": "waypoint_46",
+            "distance": 22.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_46",
+            "end_id": "waypoint_47",
+            "distance": 106.6,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_48",
+            "end_id": "node_5",
+            "distance": 39.4,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_49",
+            "end_id": "waypoint_29",
+            "distance": 29.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_49",
+            "end_id": "waypoint_48",
+            "distance": 118.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_48",
+            "end_id": "waypoint_47",
+            "distance": 76.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_50",
+            "end_id": "waypoint_47",
+            "distance": 108.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_50",
+            "end_id": "waypoint_35",
+            "distance": 38.9,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_4",
+            "end_id": "waypoint_51",
+            "distance": 85.1,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_51",
+            "end_id": "waypoint_47",
+            "distance": 86.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_22",
+            "end_id": "waypoint_53",
+            "distance": 34.7,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_53",
+            "end_id": "waypoint_52",
+            "distance": 25.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_52",
+            "end_id": "node_12",
+            "distance": 31.5,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_53",
+            "end_id": "waypoint_54",
+            "distance": 61.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_54",
+            "end_id": "node_20",
+            "distance": 24.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_55",
+            "end_id": "node_21",
+            "distance": 19.7,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_55",
+            "end_id": "node_20",
+            "distance": 21.0,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_21",
+            "end_id": "waypoint_56",
+            "distance": 27.9,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_56",
+            "end_id": "node_19",
+            "distance": 53.4,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_57",
+            "end_id": "waypoint_56",
+            "distance": 53.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_57",
+            "end_id": "node_18",
+            "distance": 25.5,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_58",
+            "end_id": "node_18",
+            "distance": 21.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_58",
+            "end_id": "node_19",
+            "distance": 66.2,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_17",
+            "end_id": "node_18",
+            "distance": 57.2,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "node_5",
+            "end_id": "waypoint_59",
+            "distance": 18.8,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_59",
+            "end_id": "waypoint_60",
+            "distance": 15.9,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_60",
+            "end_id": "waypoint_30",
+            "distance": 161.6,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_61",
+            "end_id": "waypoint_32",
+            "distance": 42.4,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_61",
+            "end_id": "waypoint_60",
+            "distance": 151.4,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_62",
+            "end_id": "waypoint_35",
+            "distance": 49.3,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_62",
+            "end_id": "waypoint_36",
+            "distance": 29.1,
+            "path_type": "walkway",
+            "is_accessible": true
+        },
+        {
+            "start_id": "waypoint_62",
+            "end_id": "waypoint_61",
+            "distance": 63.9,
+            "path_type": "walkway",
+            "is_accessible": true
+        }
+    ]
+}
