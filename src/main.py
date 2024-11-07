@@ -45,6 +45,13 @@ class CSUFNavigator:
                     self._handle_keypress(event.key)  # Handle key presses
             elif event.type == pygame.MOUSEBUTTONDOWN:  # Check for mouse button presses
                 if not self.text_input.active:  # If text input is not active
+                    # Add this before other click handling
+                    if not self.edit_mode:
+                        # Check if clicked on console panel dropdown
+                        console_click = self.console_panel.handle_click(event.pos)
+                        if console_click:
+                            continue  # Skip other click handling if dropdown was clicked
+                    
                     self._handle_mouse_click(event)  # Handle mouse click events
             elif event.type == pygame.MOUSEMOTION:  # Check for mouse motion events
                 self.mouse_pos = event.pos  # Update mouse position
@@ -96,8 +103,12 @@ class CSUFNavigator:
                 if pygame.mouse.get_pressed()[0]:  # Left click
                     clicked_node = self.map_editor._find_node_at_position(normalized_pos)  # Find the clicked node
                     if clicked_node and not self.map_editor.campus_data.locations[clicked_node].is_waypoint:  # If a valid node is clicked
-                        self.nav_handler.handle_node_click(clicked_node)  # Handle node click for navigation
-                        print(f"Selected node: {clicked_node}")  # Print the selected node
+                        # Check if we already have both nodes selected
+                        if self.nav_handler.nav_state.start_node and self.nav_handler.nav_state.end_node:
+                            print("2 nodes already selected. Press 'R' to reset selection.")
+                        else:
+                            self.nav_handler.handle_node_click(clicked_node)  # Handle node click for navigation
+                            print(f"Selected node: {clicked_node}")  # Print the selected node
 
     def _update_display(self):
         """Update the display by drawing the map and UI elements."""

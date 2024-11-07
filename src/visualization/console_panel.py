@@ -39,6 +39,36 @@ class ConsolePanel:
             "ESC: Quit"
         ]
 
+        # Add dropdown menu properties
+        self.dropdown_open = False
+        self.dropdown_rect = pygame.Rect(10, 280, 180, 30)  # Position below existing controls
+        self.algorithm_options = [
+            "Dijkstra's Algorithm",
+            "Breadth-First Search",
+            "Depth-First Search"
+        ]
+        self.selected_algorithm = "Dijkstra's Algorithm"
+        self.option_height = 30
+
+    def handle_click(self, pos):
+        """Handle clicks on the dropdown menu"""
+        if self.dropdown_rect.collidepoint(pos):
+            self.dropdown_open = not self.dropdown_open
+        elif self.dropdown_open:
+            # Check if clicked on an option
+            for i, _ in enumerate(self.algorithm_options):
+                option_rect = pygame.Rect(
+                    self.dropdown_rect.x,
+                    self.dropdown_rect.y + (i + 1) * self.option_height,
+                    self.dropdown_rect.width,
+                    self.option_height
+                )
+                if option_rect.collidepoint(pos):
+                    self.selected_algorithm = self.algorithm_options[i]
+                    self.dropdown_open = False
+                    return True
+        return False
+
     def draw(self):
         # Draw console background
         pygame.draw.rect(self.screen, self.bg_color, (0, 0, self.width, self.height))
@@ -63,3 +93,37 @@ class ConsolePanel:
         status_text = f"Accessibility: {'ON' if self.map_editor.is_accessible else 'OFF'}"
         status = self.small_font.render(status_text, True, self.text_color)
         self.screen.blit(status, (10, y))
+
+        # Draw algorithm selector dropdown
+        if not getattr(self.map_editor, 'edit_mode', True):  # Only show in navigation mode
+            pygame.draw.rect(self.screen, (255, 255, 255), self.dropdown_rect)
+            pygame.draw.rect(self.screen, (100, 100, 100), self.dropdown_rect, 2)
+            
+            # Draw selected algorithm
+            text = self.small_font.render(self.selected_algorithm, True, self.text_color)
+            text_rect = text.get_rect(midleft=(self.dropdown_rect.x + 5, self.dropdown_rect.centery))
+            self.screen.blit(text, text_rect)
+            
+            # Draw dropdown arrow
+            arrow_points = [
+                (self.dropdown_rect.right - 20, self.dropdown_rect.centery - 5),
+                (self.dropdown_rect.right - 10, self.dropdown_rect.centery + 5),
+                (self.dropdown_rect.right - 30, self.dropdown_rect.centery + 5)
+            ]
+            pygame.draw.polygon(self.screen, self.text_color, arrow_points)
+            
+            # Draw options if dropdown is open
+            if self.dropdown_open:
+                for i, option in enumerate(self.algorithm_options):
+                    option_rect = pygame.Rect(
+                        self.dropdown_rect.x,
+                        self.dropdown_rect.y + (i + 1) * self.option_height,
+                        self.dropdown_rect.width,
+                        self.option_height
+                    )
+                    pygame.draw.rect(self.screen, (255, 255, 255), option_rect)
+                    pygame.draw.rect(self.screen, (100, 100, 100), option_rect, 1)
+                    
+                    text = self.small_font.render(option, True, self.text_color)
+                    text_rect = text.get_rect(midleft=(option_rect.x + 5, option_rect.centery))
+                    self.screen.blit(text, text_rect)
