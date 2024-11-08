@@ -13,5 +13,3 @@ A pathfinding application for California State University, Fullerton campus navi
    ```bash
    pip install -r requirements.txt
    ```
-
-## Usage
