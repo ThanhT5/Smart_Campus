@@ -3,7 +3,6 @@ class NavigationState:
         self.start_node = None
         self.end_node = None
         self.current_path = None
-        self.path_type = "fastest"  # "fastest", "accessible"
         self.path_colors = {
             "fastest": (0, 255, 0),      # Green
             "accessible": (0, 150, 255),  # Light Blue

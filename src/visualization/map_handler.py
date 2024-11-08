@@ -1,6 +1,6 @@
 import pygame  # Import the pygame library for graphics and game development
 import pygame.font  # Import the font module from pygame for text rendering
-from typing import Tuple, Optional  # Import Tuple and Optional for type hinting
+from typing import Tuple, Optional, List  # Import Tuple, Optional, and List for type hinting
 from core.graph_manager import GraphManager  # Import GraphManager for handling graph-related operations
 
 class MapHandler:
@@ -52,6 +52,8 @@ class MapHandler:
         # Display settings
         self.node_radius = 6  # Radius for nodes
         self.selected_node_radius = 10  # Radius for selected nodes
+        
+        self.path_click_threshold = 5  # Pixels distance for path click detection
     
     def _load_and_scale_image(self, path: str) -> pygame.Surface:
         """Load and scale an image to map area size (not full window)."""
@@ -166,30 +168,46 @@ class MapHandler:
     #             self.screen.blit(text, (x - 10, self.margin - 20))  # X-axis labels
     #             self.screen.blit(text, (self.margin - 30, y - 10))  # Y-axis labels
     
-    def draw_graph(self, graph_manager: GraphManager) -> None:
-        """Draw the graph with nodes and edges."""
-        # Draw edges first (so they appear under nodes)
-        for edge in graph_manager.graph.edges():  # Iterate through all edges in the graph
-            start_loc = graph_manager.campus_data.get_location(edge[0])  # Get the start location of the edge
-            end_loc = graph_manager.campus_data.get_location(edge[1])  # Get the end location of the edge
+    def draw_graph(self, graph_manager: GraphManager, current_path: Optional[List[str]] = None) -> None:
+        """Draw the graph with optional path highlighting"""
+        # Draw all edges first
+        for edge in graph_manager.get_edge_list():
+            start_loc = graph_manager.campus_data.locations[edge[0]]  # Get starting location for the edge
+            end_loc = graph_manager.campus_data.locations[edge[1]]  # Get ending location for the edge
             
-            if start_loc and end_loc:  # Check if both locations are valid
-                start_pos = self._transform_coordinates(start_loc.x, start_loc.y)  # Transform start location to screen coordinates
-                end_pos = self._transform_coordinates(end_loc.x, end_loc.y)  # Transform end location to screen coordinates
-                pygame.draw.line(self.screen, (100, 100, 100), start_pos, end_pos, 2)  # Draw the edge line
+            start_pos = (
+                int(start_loc.x * self.map_width) + self.console_width,  # Calculate starting position on the screen
+                int(start_loc.y * self.window_height)  # Calculate starting position on the screen
+            )
+            end_pos = (
+                int(end_loc.x * self.map_width) + self.console_width,  # Calculate ending position on the screen
+                int(end_loc.y * self.window_height)  # Calculate ending position on the screen
+            )
+            
+            # Get path object to check accessibility
+            path = next((p for p in graph_manager.campus_data.paths 
+                        if (p.start_id == edge[0] and p.end_id == edge[1]) or 
+                           (p.start_id == edge[1] and p.end_id == edge[0])), None)  # Find the path object
+            
+            if path:
+                # Color based on accessibility
+                color = (0, 255, 0) if path.is_accessible else (255, 255, 0)  # Green if accessible, yellow otherwise
+                pygame.draw.line(self.screen, color, start_pos, end_pos, 2)  # Draw the edge with the determined color
         
-        # Draw nodes
-        for node_id in graph_manager.graph.nodes():  # Iterate through all nodes in the graph
-            location = graph_manager.campus_data.get_location(node_id)  # Get the location of the node
-            if location:  # Check if the location is valid
-                pos = self._transform_coordinates(location.x, location.y)  # Transform location to screen coordinates
-                # Draw larger node circle
-                pygame.draw.circle(self.screen, (0, 0, 255), pos, 10)  # Draw the node as a blue circle
-                
-                # Draw location name
-                text = self.font.render(location.name, True, (0, 0, 0))  # Render the location name
-                text_rect = text.get_rect(center=(pos[0], pos[1] - 20))  # Get the rectangle for positioning the text
-                self.screen.blit(text, text_rect)  # Draw the location name on the screen
+        # Draw nodes last (on top of edges)
+        for loc_id, location in graph_manager.campus_data.locations.items():  # Iterate through all locations
+            pos = (
+                int(location.x * self.map_width) + self.console_width,  # Calculate position on the screen
+                int(location.y * self.window_height)  # Calculate position on the screen
+            )
+            
+            if location.is_waypoint:
+                # Draw waypoints in yellow
+                pygame.draw.circle(self.screen, (255, 255, 0), pos, 4)  # Draw waypoint
+            else:
+                # Draw regular nodes
+                pygame.draw.circle(self.screen, (255, 255, 255), pos, 8)  # Draw white outline for regular nodes
+                pygame.draw.circle(self.screen, (50, 100, 150), pos, 6)   # Draw blue center for regular nodes
 
     def screen_to_map_coords(self, screen_pos: Tuple[int, int]) -> Tuple[int, int]:
         """Convert screen coordinates to map coordinates."""
@@ -204,17 +222,57 @@ class MapHandler:
 
     def draw_path(self, path: list, color: tuple = (255, 0, 0), width: int = 4):
         """Draw the selected path with thicker lines"""
-        if not path:
-            return
+        if not path:  # Check if the path is empty
+            return  # Exit if no path to draw
             
-        for i in range(len(path['nodes']) - 1):
-            start_id = path['nodes'][i]
-            end_id = path['nodes'][i + 1]
+        for i in range(len(path['nodes']) - 1):  # Iterate through nodes in the path
+            start_id = path['nodes'][i]  # Get starting node ID
+            end_id = path['nodes'][i + 1]  # Get ending node ID
             
-            start_loc = self.graph_manager.campus_data.locations[start_id]
-            end_loc = self.graph_manager.campus_data.locations[end_id]
+            start_loc = self.graph_manager.campus_data.locations[start_id]  # Get starting location
+            end_loc = self.graph_manager.campus_data.locations[end_id]  # Get ending location
             
-            start_pos = self._transform_coordinates(start_loc.x, start_loc.y)
-            end_pos = self._transform_coordinates(end_loc.x, end_loc.y)
+            start_pos = self._transform_coordinates(start_loc.x, start_loc.y)  # Transform starting location to screen coordinates
+            end_pos = self._transform_coordinates(end_loc.x, end_loc.y)  # Transform ending location to screen coordinates
             
-            pygame.draw.line(self.screen, color, start_pos, end_pos, width)
+            pygame.draw.line(self.screen, color, start_pos, end_pos, width)  # Draw the path segment
+
+    def get_clicked_path(self, click_pos: Tuple[int, int], graph_manager: GraphManager) -> Optional[Tuple[str, str]]:
+        """Detect if a path was clicked"""
+        def point_to_line_distance(point, line_start, line_end):
+            """Calculate distance from point to line segment"""
+            px, py = point  # Unpack point coordinates
+            x1, y1 = line_start  # Unpack line start coordinates
+            x2, y2 = line_end  # Unpack line end coordinates
+            
+            # Calculate the length of the line segment
+            line_length = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+            if line_length == 0:  # If the line length is zero
+                return ((px - x1) ** 2 + (py - y1) ** 2) ** 0.5  # Return distance to the start point
+            
+            # Calculate the distance from point to line
+            t = max(0, min(1, ((px - x1) * (x2 - x1) + (py - y1) * (y2 - y1)) / (line_length ** 2)))  # Project point onto line
+            proj_x = x1 + t * (x2 - x1)  # Calculate projected x coordinate
+            proj_y = y1 + t * (y2 - y1)  # Calculate projected y coordinate
+            return ((px - proj_x) ** 2 + (py - proj_y) ** 2) ** 0.5  # Return distance to the line
+
+        # Check each path
+        for path in graph_manager.campus_data.paths:  # Iterate through all paths
+            start_loc = graph_manager.campus_data.locations[path.start_id]  # Get starting location for the path
+            end_loc = graph_manager.campus_data.locations[path.end_id]  # Get ending location for the path
+            
+            start_pos = (
+                int(start_loc.x * self.map_width) + self.console_width,  # Calculate starting position on the screen
+                int(start_loc.y * self.window_height)  # Calculate starting position on the screen
+            )
+            end_pos = (
+                int(end_loc.x * self.map_width) + self.console_width,  # Calculate ending position on the screen
+                int(end_loc.y * self.window_height)  # Calculate ending position on the screen
+            )
+            
+            # Check if click is near this path
+            distance = point_to_line_distance(click_pos, start_pos, end_pos)  # Calculate distance from click to path
+            if distance <= self.path_click_threshold:  # Check if distance is within threshold
+                return (path.start_id, path.end_id)  # Return the IDs of the clicked path
+        
+        return None  # Return None if no path was clicked
